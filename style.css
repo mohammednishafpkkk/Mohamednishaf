@@ -1,0 +1,81 @@
+:root {
+    --bg: #0a0a0c;
+    --surf: #121216;
+    --text: #f3f3f1;
+    --muted: #8e8e99;
+    --bdr: rgba(255,255,255,0.12);
+    --acc: #d4ff33;
+    --fd: 'Syne', sans-serif;
+    --fs: 'Inter', sans-serif;
+    --fm: 'JetBrains Mono', monospace;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { background: var(--bg); color: var(--text); font-family: var(--fs); scroll-behavior: smooth; overflow-x: hidden; line-height: 1.5; }
+
+/* Shutter Preloader */
+.preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; display: flex; pointer-events: none; }
+.shutters { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: grid; grid-template-columns: repeat(5, 1fr); }
+.shutters i { background: #111116; border-right: 1px solid var(--bdr); transition: transform 0.65s cubic-bezier(0.76, 0, 0.24, 1); }
+.preloader.done .shutters i { transform: translateY(-100%); }
+.preloader.done .shutters i:nth-child(2) { transition-delay: 0.06s; }
+.preloader.done .shutters i:nth-child(3) { transition-delay: 0.12s; }
+.preloader.done .shutters i:nth-child(4) { transition-delay: 0.18s; }
+.preloader.done .shutters i:nth-child(5) { transition-delay: 0.24s; }
+.hud { position: relative; z-index: 2; width: 100%; padding: 2rem 5vw; display: flex; flex-direction: column; justify-content: space-between; transition: opacity 0.25s; }
+.preloader.done .hud { opacity: 0; }
+.hud-top { display: flex; justify-content: space-between; font-family: var(--fm); font-size: 0.82rem; color: var(--muted); text-transform: uppercase; }
+.bar-wrap { width: 100%; height: 2px; background: var(--bdr); }
+.bar { height: 100%; width: 0%; background: var(--acc); }
+.count { font-family: var(--fd); font-size: clamp(2.8rem, 7vw, 5.5rem); font-weight: 800; }
+.count small { font-size: 0.35em; color: var(--acc); }
+
+/* Header & Nav */
+header { position: fixed; top: 0; left: 0; width: 100%; padding: 1.1rem 5vw; display: flex; justify-content: space-between; align-items: center; z-index: 100; background: rgba(10,10,12,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--bdr); flex-wrap: wrap; gap: 0.8rem; }
+.brand { font-family: var(--fd); font-weight: 800; font-size: 1.25rem; color: #fff; text-decoration: none; }
+nav { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+nav a { color: var(--muted); text-decoration: none; font-size: 0.85rem; font-family: var(--fm); transition: color 0.2s; }
+nav a:hover, nav a.active { color: var(--acc); }
+
+/* Hero & Page Headers */
+.hero { position: relative; min-height: 92vh; display: flex; align-items: flex-end; padding: 7rem 5vw 4rem; border-bottom: 1px solid var(--bdr); overflow: hidden; }
+#canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+.hero-inner { position: relative; z-index: 2; width: 100%; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 2rem; pointer-events: none; }
+.hero h1 { font-family: var(--fd); font-size: clamp(3.5rem, 13vw, 11rem); line-height: 0.88; text-transform: uppercase; }
+.hero-meta { max-width: 360px; pointer-events: auto; background: rgba(18,18,22,0.85); padding: 1.2rem; border-radius: 1rem; border: 1px solid var(--bdr); }
+.hero-meta p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; }
+.cta { display: inline-block; padding: 0.7rem 1.3rem; border-radius: 99px; background: var(--acc); color: #000; font-weight: 600; text-decoration: none; font-size: 0.85rem; border: none; cursor: pointer; }
+
+.page-top { padding: 8.5rem 5vw 3.5rem; border-bottom: 1px solid var(--bdr); }
+.page-top h1 { font-family: var(--fd); font-size: clamp(2.4rem, 6vw, 4.8rem); line-height: 1; }
+.page-top p { color: var(--muted); max-width: 580px; margin-top: 0.8rem; }
+
+/* Marquee & Sections */
+.marquee { border-bottom: 1px solid var(--bdr); padding: 0.9rem 0; overflow: hidden; background: var(--surf); font-family: var(--fm); font-size: 0.78rem; color: var(--muted); white-space: nowrap; }
+.track { display: inline-block; animation: marq 18s linear infinite; }
+.track span { margin: 0 1.8rem; }
+.track i { color: var(--acc); font-style: normal; }
+@keyframes marq { to { transform: translateX(-50%); } }
+
+.sec { padding: 4.5rem 5vw; border-bottom: 1px solid var(--bdr); }
+.tag { font-family: var(--fm); font-size: 0.78rem; color: var(--acc); text-transform: uppercase; display: block; margin-bottom: 0.6rem; }
+h2 { font-family: var(--fd); font-size: clamp(1.8rem, 3.8vw, 2.8rem); margin-bottom: 1.2rem; }
+b, strong { color: var(--text); }
+
+/* Reusable Grids & Cards */
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.8rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+.card { background: var(--surf); border: 1px solid var(--bdr); border-radius: 1rem; padding: 1.8rem; text-decoration: none; color: var(--text); display: flex; flex-direction: column; justify-content: space-between; transition: border-color 0.25s, transform 0.25s; }
+.card:hover { border-color: var(--acc); transform: translateY(-4px); }
+.card h3 { font-family: var(--fd); font-size: 1.45rem; margin: 0.6rem 0; }
+.card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; }
+.card small { font-family: var(--fm); font-size: 0.78rem; color: var(--acc); }
+
+/* Gallery Art Boxes */
+.art-box { height: 190px; border-radius: 0.7rem; background: radial-gradient(circle at 30% 30%, rgba(212,255,51,0.22), rgba(56,189,248,0.12), #16161d); border: 1px solid var(--bdr); display: flex; align-items: center; justify-content: center; font-family: var(--fd); font-size: 1.6rem; margin-bottom: 1rem; text-align: center; padding: 1rem; }
+
+/* Form */
+.inp { width: 100%; padding: 0.9rem 1rem; background: #0a0a0c; border: 1px solid var(--bdr); border-radius: 0.6rem; color: #fff; font-family: var(--fs); margin-bottom: 1rem; }
+.inp:focus { outline: none; border-color: var(--acc); }
+
+footer { padding: 3rem 5vw; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-family: var(--fm); font-size: 0.8rem; color: var(--muted); }
+footer a { color: var(--acc); text-decoration: none; }
