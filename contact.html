@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Nishaf</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="preloader" id="preloader">
+        <div class="shutters"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="hud"><div class="hud-top"><span>Nishaf</span><span>Contact</span></div><div class="bar-wrap"><div class="bar" id="bar"></div></div><div class="count"><span id="num">0</span><small>%</small></div></div>
+    </div>
+
+    <header>
+        <a href="index.html" class="brand">Nishaf</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="education.html">Education &amp; Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-top">
+            <span class="tag">04 / Connect</span>
+            <h1>Say hello<span style="color:var(--acc);">.</span></h1>
+            <p>Based in Malappuram, Kerala, India. Open for web development builds, CAD collaborations, and IEEE projects.</p>
+        </section>
+
+        <section class="sec grid-2">
+            <div class="card">
+                <div>
+                    <small>DIRECT CHANNELS</small>
+                    <h3>Reach Out</h3>
+                    <p>Connect with me on GitHub or drop a direct email anytime.</p>
+                </div>
+                <div style="display:flex; gap:0.8rem; flex-wrap:wrap; margin-top:1rem;">
+                    <a href="https://github.com/muhammadshanp" target="_blank" class="cta">GitHub →</a>
+                    <a href="mailto:nishaf.pk@example.com" class="cta" style="background:#fff;">Email Me</a>
+                </div>
+            </div>
+
+            <form class="card" onsubmit="event.preventDefault(); alert('Message sent! Thank you for reaching out.');">
+                <small>SEND A MESSAGE</small>
+                <h3>Quick Form</h3>
+                <input type="text" class="inp" placeholder="Your Name" required>
+                <input type="email" class="inp" placeholder="Your Email" required>
+                <textarea rows="4" class="inp" placeholder="Your Message" required></textarea>
+                <button type="submit" class="cta">Send Message →</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <span>© 2026 Mohamed Nishaf P K • Malappuram, Kerala</span>
+        <a href="index.html">Back to Home ↑</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
