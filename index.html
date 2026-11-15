@@ -1,96 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nishaf — Builder, Developer, Civil Engineering Student</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohamed Nishaf P K — Civil Engineering & Web Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="preloader" id="preloader">
-        <div class="shutters"><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="hud">
-            <div class="hud-top"><span>Nishaf</span><span>Loading</span></div>
-            <div class="bar-wrap"><div class="bar" id="bar"></div></div>
-            <div class="count"><span id="num">0</span><small>%</small></div>
+<body class="home-page">
+  <div class="loader" id="loader">
+    <div class="loader-mark">NPK<span>.</span></div>
+    <p>LOADING PORTFOLIO</p>
+    <div class="loader-track"><span></span></div>
+  </div>
+
+  <header>
+    <a href="index.html" class="brand">NISHAF<span>.PK</span></a>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="education.html">Education &amp; Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="home-hero">
+      <div class="home-hero-copy reveal">
+        <p class="eyebrow">B.TECH CIVIL ENGINEERING • FULL-STACK DEVELOPER</p>
+        <h1>Mohamed Nishaf<span>.</span></h1>
+        <p class="home-intro">First-year Civil Engineering undergraduate at MEA Engineering College (KTU) and IEEE Student Branch contributor in Kerala, India. Blending structural precision with clean web software.</p>
+        <div class="home-actions">
+          <a href="projects.html" class="button">Explore Projects <span>→</span></a>
+          <a href="contact.html" class="home-text-link">Get in touch <span>→</span></a>
         </div>
+      </div>
+
+      <div class="home-art reveal" aria-hidden="true">
+        <div class="home-art-top"><span>ELEVATION // 01</span><span>KTU 2024</span></div>
+        <div class="home-sun"></div>
+        <div class="home-arch home-arch-back"></div>
+        <div class="home-arch home-arch-middle"></div>
+        <div class="home-arch home-arch-front"></div>
+        <div class="home-ground"></div>
+        <div class="home-art-caption"><span>MALAPPURAM, KERALA</span><span>11.05° N</span></div>
+        <div class="home-art-label">STRUCTURES &amp; CODE</div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>CIVIL ENGINEERING</span><span>•</span>
+        <span>AUTOCAD 2D DRAFTING</span><span>•</span>
+        <span>FULL-STACK WEB DEVELOPMENT</span><span>•</span>
+        <span>IEEE STUDENT BRANCH</span><span>•</span>
+        <span>IITM DATA SCIENCE &amp; AI</span><span>•</span>
+        <span>BRAND &amp; VISUAL DESIGN</span><span>•</span>
+        <span>CIVIL ENGINEERING</span><span>•</span>
+        <span>AUTOCAD 2D DRAFTING</span><span>•</span>
+        <span>FULL-STACK WEB DEVELOPMENT</span><span>•</span>
+        <span>IEEE STUDENT BRANCH</span><span>•</span>
+        <span>IITM DATA SCIENCE &amp; AI</span><span>•</span>
+        <span>BRAND &amp; VISUAL DESIGN</span><span>•</span>
+      </div>
     </div>
 
-    <header>
-        <a href="index.html" class="brand">Nishaf</a>
-        <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="education.html">Education &amp; Skills</a>
-            <a href="projects.html">Projects</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+    <section class="overview">
+      <div class="section-width reveal">
+        <p class="eyebrow">01 / OVERVIEW</p>
+        <div class="overview-content">
+          <h2>Grounded in <span>structure</span>, driven by code.</h2>
+          <div>
+            <p>Alongside my Civil Engineering studies at MEA Engineering College, I build responsive web platforms, practice 2D architectural drafting, and design visual identities for technical communities.</p>
+            <p class="home-signature">MOHAMED NISHAF P K <span>/</span> B.TECH CIVIL <span>/</span> IEEE MEMBER</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <main>
-        <section class="hero" id="hero">
-            <canvas id="canvas"></canvas>
-            <div class="hero-inner">
-                <h1>Nishaf</h1>
-                <div class="hero-meta">
-                    <p><strong>B.Tech Civil Engineering student</strong>, web developer, and designer in Kerala, India. Push the shapes around.</p>
-                    <a href="projects.html" class="cta">Explore Projects →</a>
-                </div>
-            </div>
-        </section>
-
-        <div class="marquee">
-            <div class="track">
-                <span>CIVIL ENGINEERING</span><i>✦</i><span>FULL-STACK WEB DEV</span><i>✦</i><span>AUTOCAD 2D</span><i>✦</i><span>IEEE MEMBER</span><i>✦</i><span>MALAPPURAM, KERALA</span><i>✦</i>
-                <span>CIVIL ENGINEERING</span><i>✦</i><span>FULL-STACK WEB DEV</span><i>✦</i><span>AUTOCAD 2D</span><i>✦</i><span>IEEE MEMBER</span><i>✦</i><span>MALAPPURAM, KERALA</span><i>✦</i>
-            </div>
+    <section class="directory">
+      <div class="section-width reveal">
+        <div class="directory-heading">
+          <div>
+            <p class="eyebrow">02 / DIRECTORY</p>
+            <h2>Explore <span>Sections</span></h2>
+          </div>
+          <p class="directory-note">Navigate directly to academic credentials, engineering builds, visual archives, or contact channels.</p>
         </div>
 
-        <section class="sec grid-2">
-            <div>
-                <span class="tag">01 / Overview</span>
-                <h2>Building across concrete &amp; code.</h2>
-                <p style="color:var(--muted); margin-bottom:1rem;">I’m <b>Mohamed Nishaf P K</b>, a first-year Civil Engineering undergraduate at <b>MEA Engineering College (KTU)</b>. I combine structural drafting with modern web development, data science, and visual brand design.</p>
-            </div>
-            <div class="card">
-                <div class="art-box">NPK // 2026</div>
-                <small>MALAPPURAM, KERALA • IEEE MEMBER</small>
-            </div>
-        </section>
+        <div class="directory-list">
+          <a href="education.html" class="directory-card">
+            <span class="directory-number">01</span>
+            <span class="directory-title">Education &amp; Skills</span>
+            <span class="directory-description">KTU Civil Engineering, IITM AI certification, AutoCAD &amp; web stack</span>
+            <span class="directory-arrow">→</span>
+          </a>
+          <a href="projects.html" class="directory-card">
+            <span class="directory-number">02</span>
+            <span class="directory-title">Projects</span>
+            <span class="directory-description">Apex Diecast &amp; RC, IEEE WEYORA branding, and field material surveys</span>
+            <span class="directory-arrow">→</span>
+          </a>
+          <a href="gallery.html" class="directory-card">
+            <span class="directory-number">03</span>
+            <span class="directory-title">Gallery</span>
+            <span class="directory-description">2D AutoCAD cross-sections, UI layouts, and retro sci-fi comic art</span>
+            <span class="directory-arrow">→</span>
+          </a>
+          <a href="contact.html" class="directory-card">
+            <span class="directory-number">04</span>
+            <span class="directory-title">Contact</span>
+            <span class="directory-description">GitHub repositories, direct email, and collaboration inquiries</span>
+            <span class="directory-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        <section class="sec">
-            <span class="tag">02 / Directory</span>
-            <h2>Explore Portfolio</h2>
-            <div class="grid-2">
-                <a href="education.html" class="card">
-                    <small>01 / ACADEMICS &amp; STACK</small>
-                    <h3>Education &amp; Skills →</h3>
-                    <p>B.Tech Civil Engineering, IITM Data Science &amp; AI, AutoCAD, and Web Dev stack.</p>
-                </a>
-                <a href="projects.html" class="card">
-                    <small>02 / SELECTED WORK</small>
-                    <h3>Projects Showcase →</h3>
-                    <p>Apex Diecast &amp; RC e-commerce platform(temp project), IEEE brand system, and hackathon pitch.</p>
-                </a>
-                <a href="gallery.html" class="card">
-                    <small>03 / VISUAL ARCHIVE</small>
-                    <h3>Design &amp; CAD Gallery →</h3>
-                    <p>Retro 1950s sci-fi comic panels, AutoCAD 2D structural plans, and UI snapshots.</p>
-                </a>
-                <a href="contact.html" class="card">
-                    <small>04 / CONNECT</small>
-                    <h3>Say Hello →</h3>
-                    <p>Reach out for collaborations, web builds, or IEEE initiatives.</p>
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <span>© 2026 Mohamed Nishaf P K</span>
-        <a href="contact.html">Get in touch →</a>
-    </footer>
-    <script src="script.js"></script>
+  <footer>
+    <span>© 2026 MOHAMED NISHAF P K</span>
+    <a href="https://github.com/mohammednishafpkkk" target="_blank">GITHUB.COM/MOHAMMEDNISHAFPKKK →</a>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
