@@ -75,4 +75,20 @@
       }
     }
   }
+
+  // 4. Interactive 3D Tilt on .home-art Card
+  var artCard = document.querySelector('.home-art');
+  if (artCard && !isTouch && !reduceMotion) {
+    artCard.addEventListener('mousemove', function(e) {
+      var rect = artCard.getBoundingClientRect();
+      var x = (e.clientX - rect.left) / rect.width - 0.5;
+      var y = (e.clientY - rect.top) / rect.height - 0.5;
+      artCard.style.transform = 'perspective(800px) rotateY(' + (x * 8) + 'deg) rotateX(' + (-y * 8) + 'deg)';
+      if (sun) sun.style.transform = 'translate(' + (x * 14) + 'px, ' + (y * 14) + 'px)';
+    });
+    artCard.addEventListener('mouseleave', function() {
+      artCard.style.transform = 'perspective(800px) rotateY(0deg) rotateX(0deg)';
+      if (sun) sun.style.transform = 'translate(0, 0)';
+    });
+  }
 })();
